@@ -13,7 +13,7 @@ GearTech, bilgisayar donanım ve çevre birimlerini (Klavye, Mouse, Kulaklık) d
     <td width="50%"><b>Ürün Listesi & Filtreleme</b></td>
   </tr>
   <tr>
-    <td><img src="main_window.png" alt="GearTech Ana Sayfa" width="100%"/></td>
+    <td><img src="project_screenshoot/main_window.png" alt="GearTech Ana Sayfa" width="100%"/></td>
     <td><img src="product_page.png" alt="GearTech Ürünler" width="100%"/></td>
   </tr>
 </table>
