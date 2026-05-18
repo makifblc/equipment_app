@@ -14,7 +14,7 @@ GearTech, bilgisayar donanım ve çevre birimlerini (Klavye, Mouse, Kulaklık) d
   </tr>
   <tr>
     <td><img src="project_screenshoot/main_window.png" alt="GearTech Ana Sayfa" width="100%"/></td>
-    <td><img src="product_page.png" alt="GearTech Ürünler" width="100%"/></td>
+    <td><img src="project_screenshoot/product_page.png" alt="GearTech Ürünler" width="100%"/></td>
   </tr>
 </table>
 
@@ -25,8 +25,8 @@ GearTech, bilgisayar donanım ve çevre birimlerini (Klavye, Mouse, Kulaklık) d
     <td width="50%"><b>Akıllı Ekipman Önerisi (Anket)</b></td>
   </tr>
   <tr>
-    <td><img src="compare_page.png" alt="GearTech Karşılaştırma" width="100%"/></td>
-    <td><img src="recommend_page.png" alt="GearTech Öneri Sistemi" width="100%"/></td>
+    <td><img src="project_screenshoot/compare_page.png" alt="GearTech Karşılaştırma" width="100%"/></td>
+    <td><img src="project_screenshoot/recommend_page.png" alt="GearTech Öneri Sistemi" width="100%"/></td>
   </tr>
 </table>
 
@@ -37,14 +37,14 @@ GearTech, bilgisayar donanım ve çevre birimlerini (Klavye, Mouse, Kulaklık) d
     <td width="50%"><b>Ürün Yönetim Paneli (Admin)</b></td>
   </tr>
   <tr>
-    <td><img src="test_page.png" alt="GearTech Test Paneli" width="100%"/></td>
-    <td><img src="manage_page.png" alt="GearTech Yönetim Paneli" width="100%"/></td>
+    <td><img src="project_screenshoot/test_page.png" alt="GearTech Test Paneli" width="100%"/></td>
+    <td><img src="project_screenshoot/manage_page.png" alt="GearTech Yönetim Paneli" width="100%"/></td>
   </tr>
 </table>
 
 ### ❤️ Favori Ürünler
 <p align="center">
-  <img src="favorite_page.png" alt="GearTech Favoriler" width="70%"/>
+  <img src="project_screenshoot/favorite_page.png" alt="GearTech Favoriler" width="70%"/>
 </p>
 
 ---
