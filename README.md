@@ -77,5 +77,5 @@ GearTech, bilgisayar donanım ve çevre birimlerini (Klavye, Mouse, Kulaklık) d
 
 ### 1. Depoyu Klonlayın
 ```bash
-git clone [https://github.com/kullanici_adi/GearTECH.git](https://github.com/kullanici_adi/GearTECH.git)
-cd GearTECH
+git clone [https://github.com/makifblc/equipment_app.git](https://github.com/makifblc/equipment_app.git)
+cd equipment_app
