@@ -14,7 +14,7 @@ class Navbar(ctk.CTkFrame):
 
     def _build(self):
         logo = ctk.CTkLabel(
-            self, text="⚡ GearTECH",
+            self, text="GearTECH",
             font=("Segoe UI", 18, "bold"),
             text_color="#E0E0E0"
         )

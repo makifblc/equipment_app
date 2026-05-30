@@ -16,13 +16,13 @@ class ManagePage(ctk.CTkFrame):
         top = ctk.CTkFrame(self, fg_color=COLORS["bg_secondary"], corner_radius=0, height=52)
         top.pack(fill="x")
         top.pack_propagate(False)
-        ctk.CTkLabel(top, text="⚙ Ürün Yönetimi", font=FONTS["subtitle"],
+        ctk.CTkLabel(top, text="Ürün Yönetimi", font=FONTS["subtitle"],
                      text_color=COLORS["text"]).pack(side="left", padx=20, pady=14)
         ctk.CTkButton(top, text="➕ Yeni Ürün", font=FONTS["body"],
                       fg_color=COLORS["highlight"], hover_color=COLORS["highlight_hover"],
                       height=34, corner_radius=8,
                       command=self._new_product_form).pack(side="right", padx=8, pady=9)
-        ctk.CTkButton(top, text="🔄 Yenile", font=FONTS["body"],
+        ctk.CTkButton(top, text="Yenile", font=FONTS["body"],
                       fg_color=COLORS["button"], hover_color=COLORS["accent"],
                       height=34, corner_radius=8,
                       command=self._refresh_list).pack(side="right", padx=4, pady=9)
@@ -128,13 +128,13 @@ class ManagePage(ctk.CTkFrame):
                     description=fields["desc"].get("1.0", "end").strip(),
                     rating=float(fields["rating"].get() or 0)
                 )
-                self._show_feedback("✅ Ürün başarıyla eklendi!", "success")
+                self._show_feedback("Ürün başarıyla eklendi!", "success")
                 self._refresh_list()
                 self._edit_product_form(pid)
             except Exception as e:
-                self._show_feedback(f"❌ Hata: {e}", "error")
+                self._show_feedback(f"Hata: {e}", "error")
 
-        ctk.CTkButton(self.form_panel, text="💾 Ürünü Kaydet",
+        ctk.CTkButton(self.form_panel, text="Ürünü Kaydet",
                       fg_color=COLORS["highlight"], hover_color=COLORS["highlight_hover"],
                       height=44, corner_radius=10, font=FONTS["button"],
                       command=_save).pack(fill="x", padx=20, pady=(8, 4))
@@ -184,10 +184,10 @@ class ManagePage(ctk.CTkFrame):
                     description=fields["desc"].get("1.0", "end").strip(),
                     rating=float(fields["rating"].get() or 0)
                 )
-                self._show_feedback("✅ Güncellendi!", "success")
+                self._show_feedback("Güncellendi!", "success")
                 self._refresh_list()
             except Exception as e:
-                self._show_feedback(f"❌ Hata: {e}", "error")
+                self._show_feedback(f"Hata: {e}", "error")
 
         def _delete():
             if ctk.CTkInputDialog(text=f"'{p['name']}' silinecek. Emin misiniz?\n'EVET' yazın:", title="Silme Onayı").get_input() == "EVET":
@@ -197,11 +197,11 @@ class ManagePage(ctk.CTkFrame):
 
         btn_row = ctk.CTkFrame(self.form_panel, fg_color="transparent")
         btn_row.pack(fill="x", padx=20, pady=(8, 4))
-        ctk.CTkButton(btn_row, text="💾 Güncelle",
+        ctk.CTkButton(btn_row, text="Güncelle",
                       fg_color=COLORS["highlight"], hover_color=COLORS["highlight_hover"],
                       height=40, corner_radius=8, font=FONTS["button"],
                       command=_update).pack(side="left", padx=(0, 8))
-        ctk.CTkButton(btn_row, text="🗑 Sil",
+        ctk.CTkButton(btn_row, text="Sil",
                       fg_color=COLORS["error"], hover_color="#C62828",
                       height=40, corner_radius=8, font=FONTS["button"],
                       command=_delete).pack(side="left")
@@ -211,7 +211,7 @@ class ManagePage(ctk.CTkFrame):
         self._feedback_label.pack(pady=2)
 
         ctk.CTkFrame(self.form_panel, height=1, fg_color=COLORS["border"]).pack(fill="x", padx=20, pady=12)
-        ctk.CTkLabel(self.form_panel, text="🔧 Teknik Özellikler", font=FONTS["heading"],
+        ctk.CTkLabel(self.form_panel, text="Teknik Özellikler", font=FONTS["heading"],
                      text_color=COLORS["text"]).pack(anchor="w", padx=20, pady=(0, 8))
 
         spec_frame = ctk.CTkFrame(self.form_panel, fg_color=COLORS["bg_secondary"], corner_radius=10)

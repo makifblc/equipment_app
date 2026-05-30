@@ -59,7 +59,7 @@ class TestPage(ctk.CTkFrame):
         top = ctk.CTkFrame(self, fg_color=COLORS["bg_secondary"], corner_radius=0, height=52)
         top.pack(fill="x")
         top.pack_propagate(False)
-        ctk.CTkLabel(top, text="🔬 Ekipman Test Merkezi", font=FONTS["subtitle"],
+        ctk.CTkLabel(top, text="Ekipman Test Merkezi", font=FONTS["subtitle"],
                      text_color=COLORS["text"]).pack(side="left", padx=20, pady=14)
 
         tabs = ctk.CTkTabview(
@@ -274,7 +274,7 @@ class TestPage(ctk.CTkFrame):
             widget.bind("<Button-2>",        lambda e: self._mouse_click("Orta Tık"))
             widget.bind("<Double-Button-1>", lambda e: self._mouse_click("Çift Tık"))
 
-        ctk.CTkButton(parent, text="🔄 Sıfırla", font=FONTS["body"],
+        ctk.CTkButton(parent, text="Sıfırla", font=FONTS["body"],
                       fg_color=COLORS["button"], hover_color=COLORS["accent"],
                       height=34, corner_radius=8,
                       command=self._reset_mouse).pack(pady=(0, 12))
@@ -300,7 +300,7 @@ class TestPage(ctk.CTkFrame):
     def _build_audio_tab(self, parent):
         info = ctk.CTkFrame(parent, fg_color=COLORS["bg_card"], corner_radius=10)
         info.pack(fill="x", padx=16, pady=(12, 10))
-        ctk.CTkLabel(info, text="🎧  Kulaklık Kanal ve Frekans Testi",
+        ctk.CTkLabel(info, text="Kulaklık Kanal ve Frekans Testi",
                      font=FONTS["heading"], text_color=COLORS["text"]).pack(anchor="w", padx=14, pady=(10, 2))
         ctk.CTkLabel(
             info,
@@ -446,7 +446,7 @@ class TestPage(ctk.CTkFrame):
             except Exception:
                 pass
 
-            self.after(0, lambda: status_var.set("✅ Tamamlandı"))
+            self.after(0, lambda: status_var.set("Tamamlandı"))
         except Exception as e:
             self.after(0, lambda: status_var.set(f"❌ {str(e)[:50]}"))
 

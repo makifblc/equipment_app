@@ -11,32 +11,32 @@ DB_CONFIG = {
 
 #kullanlılan renkler
 COLORS = {
-    "bg": "#121212",
-    "bg_secondary": "#1E1E1E",
-    "bg_card": "#1A1A1A",
-    "bg_input": "#2A2A2A",
-    "text": "#E0E0E0",
-    "text_secondary": "#AAAAAA",
-    "button": "#444444",
-    "button_hover": "#555555",
-    "accent": "#888888",
-    "border": "#333333",
+    "bg": "#FFFFFF",
+    "bg_secondary": "#0F172A",
+    "bg_card": "#0F172A",
+    "bg_input": "#334155",
+    "text": "#F1F5F9",
+    "text_secondary": "#94A3B8",
+    "button": "#0C5777",
+    "button_hover": "#073346",
+    "accent": "#F1F5F9",
+    "border": "#1E293B",
     "success": "#4CAF50",
     "warning": "#FF9800",
     "error": "#F44336",
-    "highlight": "#5C6BC0",
-    "highlight_hover": "#7986CB",
+    "highlight": "#073346",
+    "highlight_hover": "#0C5777",
 }
 
 #kullanılan fontlar
 FONTS = {
-    "title": ("Segoe UI", 22, "bold"),
-    "subtitle": ("Segoe UI", 16, "bold"),
-    "heading": ("Segoe UI", 14, "bold"),
-    "body": ("Segoe UI", 12),
-    "small": ("Segoe UI", 10),
-    "button": ("Segoe UI", 12, "bold"),
-    "mono": ("Consolas", 12),
+    "title": ("Inter", 22, "bold"),
+    "subtitle": ("Inter", 16, "bold"),
+    "heading": ("Inter", 14, "bold"),
+    "body": ("Inter", 12),
+    "small": ("Inter", 10),
+    "button": ("Inter", 12, "bold"),
+    "mono": ("Fira", 12),
 }
 
 #pencere bilgileri

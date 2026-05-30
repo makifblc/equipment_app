@@ -1,4 +1,3 @@
-
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +24,7 @@ class App(ctk.CTk):
         self.geometry(APP_SIZE)
         self.minsize(*APP_MIN_SIZE)
         self.configure(fg_color=COLORS["bg"])
-        self.iconbitmap("assets/logo.ico")
+        self.iconbitmap("equipment_app/assets/logo.ico")
 
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("dark-blue")

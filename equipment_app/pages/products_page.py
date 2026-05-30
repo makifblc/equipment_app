@@ -1,9 +1,9 @@
-
 import customtkinter as ctk
 import webbrowser
+import os
+from PIL import Image
 from config import COLORS, FONTS
 import database as db
-
 
 class ProductsPage(ctk.CTkFrame):
     def __init__(self, parent, navigate_callback, **kwargs):
@@ -20,7 +20,7 @@ class ProductsPage(ctk.CTkFrame):
         top.pack(fill="x")
         top.pack_propagate(False)
 
-        ctk.CTkLabel(top, text="📦 Ürünler", font=FONTS["subtitle"],
+        ctk.CTkLabel(top, text="Ürünler", font=FONTS["subtitle"],
                      text_color=COLORS["text"]).pack(side="left", padx=20, pady=14)
 
         search_frame = ctk.CTkFrame(top, fg_color=COLORS["bg_input"], corner_radius=8)
@@ -43,7 +43,7 @@ class ProductsPage(ctk.CTkFrame):
                      text_color=COLORS["accent"]).pack(anchor="w", padx=16, pady=(18, 4))
 
         self._cat_buttons = {}
-        btn_all = ctk.CTkButton(sidebar, text="🗂  Tümü", font=FONTS["body"],
+        btn_all = ctk.CTkButton(sidebar, text="Tümü", font=FONTS["body"],
                                  fg_color=COLORS["highlight"], hover_color=COLORS["highlight_hover"],
                                  anchor="w", corner_radius=8, height=38,
                                  command=lambda: self._set_category(None))
@@ -142,6 +142,10 @@ class ProductsPage(ctk.CTkFrame):
                          text_color=COLORS["accent"]).grid(row=0, column=0, columnspan=3, pady=60)
             return
 
+        # 'pics' klasörünün tam yolunu buluyoruz (dosyanın bulunduğu dizinden yukarı çıkıp pics'e giriyoruz)
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        pics_dir = os.path.join(base_dir, '..', 'pics')
+
         for idx, p in enumerate(self._filtered):
             row, col = divmod(idx, 3)
             card = ctk.CTkFrame(self.prod_scroll, fg_color=COLORS["bg_secondary"],
@@ -149,8 +153,16 @@ class ProductsPage(ctk.CTkFrame):
             card.grid(row=row, column=col, padx=10, pady=10, sticky="nsew")
             self.prod_scroll.rowconfigure(row, weight=0)
 
-            icon = p.get("category_icon", "📦")
-            ctk.CTkLabel(card, text=icon, font=("Segoe UI", 44)).pack(pady=(16, 2))
+            # Görseli ID ile eşleştiriyoruz (Örn: pics/k1.jpg)
+            img_filename = f"k{p['id']}.jpg"
+            img_path = os.path.join(pics_dir, img_filename)
+
+            if os.path.exists(img_path):
+                img = ctk.CTkImage(light_image=Image.open(img_path), size=(100, 100))
+                ctk.CTkLabel(card, image=img, text="").pack(pady=(16, 2))
+            else:
+                icon = p.get("category_icon", "📦")
+                ctk.CTkLabel(card, text=icon, font=("Segoe UI", 44)).pack(pady=(16, 2))
 
             brand_lbl = ctk.CTkLabel(card, text=p.get("brand", ""), font=FONTS["small"],
                                       text_color=COLORS["accent"])
