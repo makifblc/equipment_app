@@ -4,7 +4,7 @@ GearTech, bilgisayar donanım ve çevre birimlerini (Klavye, Mouse, Kulaklık) d
 
 ---
 
-## 📸 Ekran Görüntüleri
+## 📸 Ekran Görüntüleri 
 
 ### 🖥️ Ana Sayfa & Ürün Listesi
 <table>
